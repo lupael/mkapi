@@ -2,7 +2,7 @@
 	error_reporting(0);
 	# configuration for database
 	$_config['database']['hostname'] = "localhost";
-	$_config['database']['username'] = "";
+	$_config['database']['username'] = "root";
 	$_config['database']['password'] = "";
 	$_config['database']['database'] = "api_mikrotik";
 	
