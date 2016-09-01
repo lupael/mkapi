@@ -14,17 +14,15 @@
 
 <body>
  <!-- Page Content -->
-        <div id="page-wrapper">
-
+       <div class="content-wrapper">
+		<section class="content">
             <div class="row">
-                <div class="col-lg-12"><br/>
-                        <div class="col-lg-2"></div>
-		                <div class="col-lg-8">
-		                    <div class="panel panel-info">                              
-		                        <div class="panel-heading">
-		                            Edit Site
+                <div class= "col-md-6 col-md-offset-3">
+		                    <div class="box box-solid box-primary">                              
+		                        <div class="box-header">
+		                            <h3 class="box-title"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Edit Site</h3>
 		                        </div>
-		                        <div class="panel-body">
+		                        <div class="box-body">
                                 	<?php
 										$sql=mysql_query("SELECT * FROM mt_config WHERE mt_id='".$_GET['id']."'");
 										$result=mysql_fetch_array($sql);
@@ -59,8 +57,10 @@
                     <!-- /.row -->
                 </div>
                 <!-- /#page-wrapper -->
-        
+			</section>
+		
             </div>
+			
             <!-- /#wrapper -->
 </body>
 </html>
