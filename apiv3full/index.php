@@ -97,7 +97,7 @@
                     </ul>
             <!-- /.navbar-static-side -->
         </nav>        
-		 <? if(!isset($_REQUEST['opt'])) { ?>
+		 <?php if(!isset($_REQUEST['opt'])) { ?>
         <!-- Page Content -->
        <div id="page-wrapper">
            <br />
