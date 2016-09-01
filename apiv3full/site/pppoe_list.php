@@ -26,7 +26,8 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>     
-                                        	<th>ลำดับที่</th>                                                                         	
+                                        	<th>No.</th>
+                                                                          	
                                             <th>แพคเกจที่ใช้งาน</th>
                                             <th>วัน/เวลา ที่เพิ่มบัตร</th>
                                             <th>จำนวนบัตร</th>                                            

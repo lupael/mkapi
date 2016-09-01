@@ -7,9 +7,9 @@
 //////////////////////////////////////////////////////////////////// ?>
 <?php require_once('../config/routeros_api.class.php'); ?>
 <?php
-$ipRouteros = "ไอพีที่ท่านใช้งาน";
-$Username="api";
-$Pass="พาสเวิรด์ของท่าน";
+$ipRouteros = "172.15.0.1";//ใส่เลข ip Router ของท่าน
+$Username="api"; //ใส่ user ที่สร้างไว้ใน Winbox ของผมสร้าง User API ในกลุ่ม Api
+$Pass="03167"; //ใส่รหัสผ่านของ User ที่ท่านสร้างไว้
 $api_puerto=8728;
 $interface = $_GET["interface"]; //"<pppoe-nombreusuario>";
 

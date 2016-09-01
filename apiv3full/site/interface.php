@@ -21,7 +21,7 @@ header("Refresh: 60; URL=$url1");
         <section class="content">
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-13">
                         <div class="col-md-3"></div>
 		                <div class="col-md-8">
                     <div class="box box-solid box-primary">
@@ -49,7 +49,7 @@ header("Refresh: 60; URL=$url1");
 													for($i=0; $i<$num; $i++){	
 													$no=$i+1;
 													echo "<tr>";
-																																																								echo "<td>".$ARRAY[$i]['.id']."</td>";	
+														echo "<td>".$ARRAY[$i]['.id']."</td>";	
 														echo "<td>".$ARRAY[$i]['name']."</td>";
 														echo "<td>".$ARRAY[$i]['comment']."</td>";
 													    echo "<td>".$ARRAY[$i]['type']."</td>";

@@ -23,7 +23,7 @@ header("Refresh: 60; URL=$url1");
         <div id="page-wrapper">
            <br />
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-offset-3 col-md-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a href="index.php?opt=useronline"><button type="button"class="btn btn-success"><i class="fa fa-wifi"></i> แสดงรายละเอียดของอุปกรณ์ที่กำลังใช้งานขณะนี้</button></a>
@@ -91,8 +91,7 @@ header("Refresh: 60; URL=$url1");
                                                                 }
                                                                 
                                                         }       echo "</td>";
-                                                                
-                                                                                                                           echo "<td>".$ARRAY[$i]['login-by']."</td>";                                                     
+                                                                                                                   
                                                            
                                                     
                                                     }

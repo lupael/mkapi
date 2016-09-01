@@ -29,7 +29,7 @@
 				$ARRAY = $API->comm("/ip/hotspot/user/add", array(
 									"name"		=> $username,
 									"password"	=> $password,
-									"profile"	=> $profiles,
+									"profile"	=> $profile,
 									));
 				$i++;
 			}

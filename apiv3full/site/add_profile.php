@@ -17,7 +17,7 @@
          <section class="content">
 
             <div class="row">
-              <div class= "col-md-6 col-md-offset-3">
+              <div class= "col-md-8 col-md-offset-3">
 		                    <div class="panel panel-info">                              
 		                        <div class="panel-heading">
 		                            <div><h4><panel class="panel bg-blue"><i class="fa fa-wifi"></i> สร้างแพคเกจให้บริการ Hotspot 
