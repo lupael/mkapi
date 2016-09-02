@@ -27,16 +27,18 @@
 </head>
 
 <body>
- <div class="content-wrapper">
-        <section class="content">
+ <!-- Page Content -->
+        <div id="page-wrapper">
 
             <div class="row">
-                <div class= "col-md-6 col-md-offset-3">
-		                     <div class="box box-solid box-primary">                             
-		                        <div class="box-header">
-		                            <h3 class="box-title"><i class="fa fa-pencil"></i>Change Password</h3>
+                <div class="col-lg-12"><br/>
+                        <div class="col-lg-2"></div>
+		                <div class="col-lg-8">
+		                    <div class="panel panel-info">                              
+		                        <div class="panel-heading">
+		                            Change Password
 		                        </div>
-		                         <div class="box-body">
+		                        <div class="panel-body">
 		                           <form id="change_pass" action="" method="post">                                   		
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">Old Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -57,12 +59,13 @@
                                     </form>
 		                        </div>		                        
                         </div>
-                        
+                        <!-- /.col-lg-12 -->
                     </div>
-           </section>
+                    <!-- /.row -->
+                </div>
+                <!-- /#page-wrapper -->
+        
             </div>
-			
-			<script src="../dist/js/demo.js"></script>
-			<script src="../dist/js/app.min.js"></script>
+            <!-- /#wrapper -->
 </body>
 </html>

@@ -16,7 +16,7 @@ error_reporting(0);
 
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mikrotik API | Dashboard</title>
+  <title>AdminLTE 2 | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -299,35 +299,7 @@ $.extend($.easing, {
 	}
 });
 </script>
- <!-- Script แสดงวันเวลา --> 
-    <script type="text/javascript" >
-        function date_time(id) {
-            date = new Date;
-            year = date.getFullYear();
-            month = date.getMonth();
-            months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dev');
-            d = date.getDate();
-            day = date.getDay();
-            days = new Array('sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
-            h = date.getHours();
-            if (h < 10) {
-                h = "0" + h;
-            }
-            m = date.getMinutes();
-            if (m < 10) {
-                m = "0" + m;
-            }
-            s = date.getSeconds();
-            if (s < 10) {
-                s = "0" + s;
-            }
-            result = '' + days[day] + ' ' + d + ' ' + months[month] + ' ' + year + ' ' + h + ':' + m + ':' + s;
-            document.getElementById(id).innerHTML = result;
-            setTimeout('date_time("' + id + '");', '1000');
-            return true;
-        }
-      
-    </script> 
+
        
 </head>
 
@@ -338,9 +310,9 @@ $.extend($.easing, {
     <!-- Logo -->
     <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>D</b>UI</span>
+      <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Mikrotik</b>API</span>
+      <span class="logo-lg"><b>Admin</b>LTE</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -366,8 +338,8 @@ $.extend($.easing, {
                 <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo ($_SESSION['APIUser']); ?> - Mikrotik
-                  <small>Kamphengphet Devaloper</small>
+                  <?php echo ($_SESSION['APIUser']); ?> - Web Developer
+                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -388,10 +360,10 @@ $.extend($.easing, {
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="https://www.facebook.com/manas.panjai" target="_blank" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="../admin/login.php" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -433,59 +405,21 @@ $.extend($.easing, {
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="index.php">
+          <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="label label-primary pull-right">2</span>
           </a>
-<!-- list dashboard
           <ul class="treeview-menu">
             <li><a href="index.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
 			
           </ul>
- -->         
         </li>
-
- <li class="treeview">
-          <a href="#">
-            <i class="fa fa-group"></i>
-            <span>Hotspot</span>
-            <span class="label label-primary pull-right"> 6</span>
-          </a>
-          <ul class="treeview-menu">
-            <li>
-            	<a href="#"><i class="fa fa-circle-o"></i>Add Accout </a>
-            	<ul class="treeview-menu">
-					 <li><a href="index.php?opt=add_user"><i class="fa fa-circle-o"></i>-เพิ่มผู้ใช้งานเอง (หนึ่ง) </a></li>
-           			 <li><a href="index.php?opt=add_genuser"><i class="fa fa-circle-o"></i> เพิ่มผู้ใช้งานกลุ่มตัวเลข 0-9 </a></li>
-           			 <li><a href="index.php?opt=add_genuser2"><i class="fa fa-circle-o"></i>เพิ่มผู้ใช้งานกลุ่มแบบ a-z</a></li>
-           			 <li><a href="index.php?opt=import_csv"><i class="fa fa-circle-o"></i>Import Accout CSV</a></li>
-				</ul>
-            </li>
-            <li>
-            	<a href="index.php?opt=add_profile"><i class="fa fa-circle-o"></i>Add Profile </a>
-            </li>
-            <li>
-            	<a href="index.php?opt=userall"><i class="fa fa-circle-o"></i>View All User </a>
-            </li>
-            <li>
-            	<a href="index.php?opt=profile"><i class="fa fa-circle-o"></i>View All Profile </a>
-            </li>
-			<li>
-				<a href="index.php?opt=useronline"><i class="fa fa-circle-o"></i>User Online</a>
-			</li>
-			<li>
-				<a href="index.php?opt=user_list"><i class="fa fa-circle-o"></i>Print Card</a>
-			</li>
-
-          </ul>
-        </li>
-
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>PPPOE</span>
             <span class="pull-right-container">
-              <span class="label label-primary pull-right"> 4</span>
+              <span class="label label-primary pull-right"> 3</span>
             </span>
           </a>
           <ul class="treeview-menu">
@@ -496,32 +430,41 @@ $.extend($.easing, {
           </ul>
         </li>
        
-       
-       	<li class="treeview">
-          <a href="index.php?opt=interface">
-            <i class="fa fa-line-chart"></i>
-            <span>interface</span>
-           <span class="label label-primary pull-right"></span>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-group"></i>
+            <span>Hotspot</span>
+            <span class="label label-primary pull-right"> 5</span>
           </a>
-
-          <li class="treeview">
-          <a href="index.php?opt=ap_online">
-            <i class="fa fa-wifi"></i>
-            <span>AP Online</span>
-           <span class="label label-primary pull-right"> 1</span>
-          </a>
-<!-- /.sidebar 
-          		<ul class="treeview-menu">
-            		<li><a href="index.php?opt=interface"><i class="fa fa-circle-o"></i>ดูสถานะ interface</a></li>
-          		</ul>
-          		-->
+          <ul class="treeview-menu">
+            <li><a href="index.php?opt=add_user"><i class="fa fa-circle-o"></i>-เพิ่มผู้ใช้งานเอง (หนึ่ง) </a></li>
+            <li><a href="index.php?opt=add_genuser"><i class="fa fa-circle-o"></i> เพิ่มผู้ใช้งานกลุ่มตัวเลข 0-9 </a></li>
+            <li><a href="index.php?opt=add_genuser2"><i class="fa fa-circle-o"></i>เพิ่มผู้ใช้งานกลุ่มแบบ a-z</a></li>
+			<li><a href="index.php?opt=user"><i class="fa fa-circle-o"></i>ดูบัตรที่สร้างและปริ้น</a></li>
+		    <li><a href="index.php?opt=useronline"><i class="fa fa-circle-o"></i>ดูผู้ใช้ออนไลน์</a></li>
+          </ul>
         </li>
         <li class="treeview">
-          <a href="..//admin/index.php">
-            <i class="glyphicon glyphicon-log-out"></i>
-            <span>กลับหน้า Site งาน</span>
+          <a href="#">
+            <i class="fa fa-money"></i>
+            <span>Packet</span>
+           <span class="label label-primary pull-right"> 2</span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?opt=add_profile"><i class="fa fa-circle-o"></i> เพิ่มแพคเกจ</a></li>
+            <li><a href="index.php?opt=profile"><i class="fa fa-circle-o"></i> แสดงรายละเอียดแพคเกจ</a></li>
+          </ul>
+        </li>
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-line-chart"></i>
+            <span>interface</span>
            <span class="label label-primary pull-right"> 1</span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?opt=interface"><i class="fa fa-circle-o"></i>ดูสถานะ interface</a></li>
+          </ul>
+        </li>
         
       </ul>
     </section>
@@ -549,100 +492,70 @@ $.extend($.easing, {
         <li class="active">Dashboard</li>
       </ol>
     </section>
-
 	<section class="content">
-	<!-- Small boxes (Stat box) -->
-
-
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3><?php echo " ".$ARRAY['0']['cpu-load']."%"; ?></h3>
-
-              <p>CPU Traffic</p>
-            </div>
-            <div class="icon">
-              <i class="glyphicon glyphicon-dashboard"></i>
-            </div>
-            <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3><?php echo " ".round($ram,1)."MB"; ?><sup style="font-size: 20px"></sup></h3>
-
-              <p>Free-memory</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3><?php $ARRAY = $API->comm("/ip/hotspot/active/print", array(
-    "count-only"=> "",
-    "~active-address" => "1.1.",
-));
-echo($ARRAY);?></h3>
-
-              <p>User Online</p>
-            </div>
-            <a href="javascript:popup('index.php?opt=dhcp')">
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            </a>
-            <a href="index.php?opt=userall" target="_blank" class="small-box-footer">
-              All    <?php $ARRAY = $API->comm("/ip/hotspot/user/print", array(
-												"count-only"=> "",
-												"~active-address" => "1.1.",
-											));
-											print_r($ARRAY)?>    User    <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3><?php echo "  ".round($hdd,1)."MB"; ?></h3>
-
-              <p>Free-HDD</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-
+	
          <div class="row">
-       
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text" >CPU Traffic</span>
+              <span class="info-box-number" ><?php echo " ".$ARRAY['0']['cpu-load']."%"; ?></span>
+			
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="ion ion-arrow-graph-up-right"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">free-memory</span>
+              <span class="info-box-number"><?php echo " ".round($ram,1)."MB"; ?></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
 
         <!-- fix for small devices only -->
         <div class="clearfix visible-sm-block"></div>
 
-        
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="ion ion-archive"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">free-hdd-space</span>
+              <span class="info-box-number"><?php echo "value ".round($hdd,1)."MB"; ?></span></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">User Online</span>
+              <span class="info-box-number"><?php $ARRAY = $API->comm("/ip/hotspot/active/print", array(
+    "count-only"=> "",
+    "~active-address" => "1.1.",
+));
+echo($ARRAY);?></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
 
 	</div>
           
@@ -656,10 +569,9 @@ echo($ARRAY);?></h3>
 			  
                 
             </div>
-
             <!-- /.box-header -->
             <div class="box-body">
-             <div class="row">
+              <div class="row">
                 <div class="col-md-8">
 				<div class="chart">
 				<div id="container" style="height: 400px;"></div>
@@ -677,182 +589,70 @@ echo($ARRAY);?></h3>
                                             </select>
 										
                 </div>
-
-
-                
-
-
-                 <!-- /.col -->
-                 <br>
-
-        <div class="col-md-4">
-          <!-- Info Boxes Style 2 -->
-          <div class="info-box bg-yellow">
-            <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Location site</span>
-              <span class="info-box-number"><?php echo "<td>".$result['mt_name']."</td>";?></span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 50%"></div>
-              </div>
-                  <span class="progress-description">
-                    <?php echo "<td>".$result['mt_location']."</td>";?>
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          <div class="info-box bg-green">
-            <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">HOTSPOT All User</span>
-              <span class="info-box-number"><?php $ARRAY = $API->comm("/ip/hotspot/user/print", array(
-												"count-only"=> "",
-												"~active-address" => "1.1.",
-											));
-											print_r($ARRAY)?></span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 20%"></div>
-              </div>
-                  <span class="progress-description">
-                    โปรไฟล์ HOTSPOT    <?php $ARRAY = $API->comm("/ip/hotspot/user/profile/print", array(
-												"count-only"=> "",
-												"~active-address" => "1.1.",
-											));
-											print_r($ARRAY)?>    Profile
-                  </span>
-
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          <div class="info-box bg-red">
-            <span class="info-box-icon"><i class="ion ion-ios-cloud-download-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">PPPOE ALL User</span>
-              <span class="info-box-number">0</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 70%"></div>
-              </div>
-                  <span class="progress-description">
-                   โปรไฟล์ PPPoe    0   Profile
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          <div class="info-box bg-aqua">
-            <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">วันเวลาใช้งาน</span>
-              <span class="info-box-number"><!-- แสดงวันเวลา -->
-            <span id="date_time" style="color: #ffffff; font-size: 8;"></span>
-            <script type="text/javascript"> window.onload = date_time('date_time');</script></span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 40%"></div>
-              </div>
-                  <span class="progress-description">
-                    40% Increase in 30 Days
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          </div>
-
-        </div>
-        <!-- /.col -->
-
-      </div>
-      </section>
-     
-<!-- แถบ 4 สีด้านล่าง -->
-<section class="content">
-         <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text" >IP ROUTER</span>
-              <span class="info-box-number" ><?php echo $result['mt_ip'];?></span>
-			
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <a href="javascript:popup('index.php?opt=dhcp')">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="ion ion-arrow-graph-up-right"></i></span>
-        </a>
-            <div class="info-box-content">
-              <span class="info-box-text">DHCP LEASE</span>
-              <span class="info-box-number"><?php $ARRAY = $API->comm("/ip/dhcp-server/lease/print", array(
-												"count-only"=> "",
-												"~active-address" => "1.1.",
-											));
-											print_r($ARRAY)?></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-
-        <div class="clearfix visible-sm-block"></div>
-
-        <a href="javascript:popup('index.php?opt=interface')">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="ion ion-archive"></i></span>
-        </a>
-            
-            <div class="info-box-content">
-              <span class="info-box-text">INTERFACE
-              </a></span>
-              <span class="info-box-number"><?php $ARRAY = $API->comm("/interface/print", array(
+                 <div class="col-md-4">
+				 <p class="text-center">
+                    <strong>Shotcut Menu</strong>
+                  </p>
+          <!-- Application buttons -->
+              <a href="javascript:popup('index.php?opt=interface','',500,500)" class="btn btn-app">
+			  <span class="badge bg-yellow"><?php $ARRAY = $API->comm("/interface/print", array(
 												"count-only"=> "",
 												
 											));
-											echo($ARRAY)?></span></span>
+											echo($ARRAY)?></span>
+                <i class="fa fa-signal"></i> Interface
+              </a>
+              <a href="javascript:popup('index.php?opt=dhcp','',500,500)" class="btn btn-app">
+                <span class="badge bg-yellow"><?php $ARRAY = $API->comm("/ip/dhcp-server/lease/print", array(
+												"count-only"=> "",
+												"~active-address" => "1.1.",
+											));
+											print_r($ARRAY)?></span>
+                <i class="fa fa-laptop"></i> Dhcp lease
+              </a>
+             
+              <a href="javascript:popup('index.php?opt=userall','',500,500)"class="btn btn-app">
+                <span class="badge bg-purple"><?php $ARRAY = $API->comm("/ip/hotspot/user/print", array(
+												"count-only"=> "",
+												"~active-address" => "1.1.",
+											));
+											print_r($ARRAY)?></span></span>
+                <i class="fa fa-users"></i> Users all
+              </a>
+			  <a href="javascript:popup('index.php?opt=useronline','',500,500)"class="btn btn-app">
+                <span class="badge bg-teal"><?php $ARRAY = $API->comm("/ip/hotspot/active/print", array(
+												"count-only"=> "",
+												"~active-address" => "1.1.",
+											));
+											echo($ARRAY);?></span>
+                <i class="fa fa-user-plus"></i> User online
+              </a>
+              <a href="javascript:popup('index.php?opt=profile','',500,500)"class="btn btn-app">
+                <span class="badge bg-teal"><?php $ARRAY = $API->comm("/ip/hotspot/user/profile/print", array(
+												"count-only"=> "",
+												"~active-address" => "1.1.",
+											));
+											print_r($ARRAY)?></span>
+                <i class="fa fa-folder-open"></i> Profile All
+              </a>
+			  
+              
+            
+          
+          <!-- /.box -->
+              </div>
+			  
+              <!-- /.row -->
+           
             </div>
             
-            <!-- /.info-box-content -->
           </div>
-          <!-- /.info-box -->
+          
         </div>
-        
         <!-- /.col -->
-        
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-        
-            <div class="info-box-content">
-              <span class="info-box-text">ADMIN WINBOX</span>
-              <span class="info-box-number"><?php echo $result['mt_user'];?></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-           
-          <!-- /.info-box -->
-        </div>
-     
-	</section> 
-
+      </div>
+	 
+</section>
 </div>
     <!-- /#wrapper -->
 		 <?php
