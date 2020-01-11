@@ -115,7 +115,6 @@
         <!-- /#page-wrapper -->
 								<div class="form-group input-group">                                        
                                        &nbsp;&nbsp;&nbsp;<button id="btnSave" class="btn btn-danger" type="submit"><i class="fa fa-times"></i>&nbsp;Delete&nbsp;</button>
-                                       &nbsp;&nbsp;&nbsp;<a href="index.php?opt=userall"><button id="btnCancel" class="btn btn-danger" type="reset"  Onclick="javascript:history.back()"><i class="glyphicon glyphicon-paste"></i>&nbsp;Cancle&nbsp;</button></a>
                                     </div>
     </div>
     </div></div></div></form>

@@ -49,8 +49,7 @@ header("Refresh: 60; URL=$url1");
 													for($i=0; $i<$num; $i++){	
 													$no=$i+1;
 													echo "<tr>";
-														//echo "<td>".$ARRAY[$i]['.id']."</td>";	
-                            echo "<td>".$no."</td>"; 
+																																																								echo "<td>".$ARRAY[$i]['.id']."</td>";	
 														echo "<td>".$ARRAY[$i]['address']."</td>";
 														echo "<td>".$ARRAY[$i]['mac-address']."</td>";
 													    echo "<td>".$ARRAY[$i]['host-name']."</td>";

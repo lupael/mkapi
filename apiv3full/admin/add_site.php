@@ -22,16 +22,17 @@
 </head>
 
 <body>
- <div class="content-wrapper">
-        <section class="content">
-       
+ <!-- Page Content -->
+        <div id="page-wrapper">
             <div class="row">
-                <div class= "col-md-6 col-md-offset-3">
-		                  <div class="box box-solid box-primary">                             
-		                        <div class="box-header">
-		                           <h3 class="box-title"><i class="fa fa-user"></i>&nbsp;&nbsp;<?php echo $_SESSION['APIUser'] ;?></h3>
+                <div class="col-lg-12"><br/>
+                        <div class="col-lg-2"></div>
+		                <div class="col-lg-8">
+		                    <div class="panel panel-info">                              
+		                        <div class="panel-heading">
+		                           <?php echo $_SESSION['APIUser'] ;?>
 		                        </div>
-		                       <div class="box-body">
+		                        <div class="panel-body">
 		                           <form id="add_site" action="" method="post">                                   		
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">IP Address</span>
@@ -84,7 +85,7 @@
                     <!-- /.row -->
                 </div>
                 <!-- /#page-wrapper -->
-        </section>
+        
             </div>
             <!-- /#wrapper -->
 </body>

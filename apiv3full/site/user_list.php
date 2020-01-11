@@ -27,10 +27,8 @@
                                 <table id="example1" class="table table-bordered table-hover">
                                     <thead>
                                         <tr>     
-                                        	<th>No.</th>                                                                         	
-                                            <th>ชื่อ</th>
-                                            <th>รหัสผ่าน</th>
-                                            <th>Profile</th>
+                                        	<th>ลำดับที่</th>                                                                         	
+                                            <th>แพคเกจที่ใช้งาน</th>
                                             <th>วัน/เวลา ที่เพิ่มบัตร</th>
                                             <th>จำนวนบัตร</th>                                            
                                             <th>แก้ไข / พิมพ์</th>
@@ -45,9 +43,7 @@
 													While($result=mysql_fetch_array($query)){	
 													$no++;
 													echo "<tr>";
-														echo "<td>".$no."</td>";
-                            echo "<td>".$result['user']."</td>";
-                            echo "<td>".$result['pass']."</td>";								
+														echo "<td>".$no."</td>";								
 														echo "<td>".$result['profile']."</td>";
 														echo "<td>".$result['date']."</td>";
 														echo "<td>";

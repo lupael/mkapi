@@ -98,7 +98,7 @@
             <!-- /.navbar-static-side -->
         </nav>        
 		 <?php if(!isset($_REQUEST['opt'])) { ?>
-               <!-- Page Content -->
+        <!-- Page Content -->
        <div id="page-wrapper">
            <br />
             <div class="row">
@@ -109,58 +109,58 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <form name="site" action="" method="post">
+                            	<form name="site" action="" method="post">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>     
-                                            <th><span class="style2">ลำดับ</span></th> 
+                                        	<th><span class="style2">ลำดับ</span></th> 
                                             <th><span class="style2">ชื่อไซต์งาน</span></th> 
-                                            <th><span class="style2">สถานที่</span></th>                                                                        
+                                            <th><span class="style2">สถานที่</span></th>                                                                       	
                                             <th><span class="style2">ไซต์งาน</span></th>                                           
                                             <th><span class="style2">แรม</span></th>
                                             <th><span class="style2">ฮาร์ดดิส</span></th>                                            
                                             <th><span class="style2">สถานะ</span></th>
-                                            <th><span class="style2">จัดการ</span></th>
+                                   			<th><span class="style2">จัดการ</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         
                                             
-                                                <?php
-                                                    $id=$_SESSION['EmpId'];                                             
-                                                    $sql=mysql_query("SELECT mt_id,mt_ip,mt_user,mt_pass,mt_name,mt_location FROM mt_config WHERE mt_id='".$id."'");
-                                                    $no=0;
-                                                    while($result=mysql_fetch_array($sql)){
-                                                    $no++;
-                                                    $API = new routeros_api();              
-                                                    $API->debug = false;
-                                                    if($API->connect($result['mt_ip'], $result['mt_user'], $result['mt_pass'])){                                                                            
-                                                        $ARRAY = $API->comm("/system/resource/print");  
-                                                        $ram =  $ARRAY['0']['free-memory']/1048576;
-                                                        $hdd =  $ARRAY['0']['free-hdd-space']/1048576;                                              
-                                                    }                                                                                                               
-                                                    echo "<tr>";
-                                                        echo "<td>".$no."</td>";                                                                                                                                                            
-                                                        echo "<td>".$result['mt_name']."</td>";                                                     
-                                                        echo "<td>".$result['mt_location']."</td>";
-                                                        echo "<td>".$ARRAY['0']['cpu-load']."%</td>";                                                                                                                                                                               
-                                                        echo "<td>".round($ram,1)." MB</td>";
-                                                        echo "<td>".round($hdd,1)." MB</td>";
-                                                        echo "<td>";
-                                                            if($API->connect($result['mt_ip'], $result['mt_user'], $result['mt_pass'])){
-                                                                echo "<button type=\"button\" class=\"btn btn-success\"><i class=\"fa fa-check\"></i> CONNECT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>";
-                                                                $conn="connect";    
-                                                            }else{
-                                                                echo "<button type=\"button\" class=\"btn btn-danger\"><i class=\"fa fa-times\"></i> DISCONNECT</button>";
-                                                                $conn="disconnect";
-                                                            }                                                                   
-                                                        echo "</td>";   
-                                                                                                            
-                                                        echo "<td><a href='site/site_conn.php?id=".$result['mt_id']."&conn=".$conn."'><img src=\"img/enter.png\" width=\"20\" title=\"Enter To Site\"></a>";                                                
-                                                    echo "</td>";
-                                                    echo "</tr>";
-                                                    }
-                                                ?>
+												<?php
+													$id=$_SESSION['EmpId'];												
+													$sql=mysql_query("SELECT mt_id,mt_ip,mt_user,mt_pass,mt_name,mt_location FROM mt_config WHERE mt_id='".$id."'");
+													$no=0;
+													while($result=mysql_fetch_array($sql)){
+													$no++;
+													$API = new routeros_api();				
+													$API->debug = false;
+													if($API->connect($result['mt_ip'], $result['mt_user'], $result['mt_pass'])){																			
+														$ARRAY = $API->comm("/system/resource/print");	
+														$ram =	$ARRAY['0']['free-memory']/1048576;
+														$hdd =	$ARRAY['0']['free-hdd-space']/1048576;												
+													}																												
+													echo "<tr>";
+														echo "<td>".$no."</td>";																																							
+														echo "<td>".$result['mt_name']."</td>";														
+														echo "<td>".$result['mt_location']."</td>";
+														echo "<td>".$ARRAY['0']['cpu-load']."%</td>";															 																													
+														echo "<td>".round($ram,1)." MB</td>";
+														echo "<td>".round($hdd,1)." MB</td>";
+														echo "<td>";
+															if($API->connect($result['mt_ip'], $result['mt_user'], $result['mt_pass'])){
+																echo "<button type=\"button\" class=\"btn btn-success\"><i class=\"fa fa-check\"></i> CONNECT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>";
+																$conn="connect";	
+															}else{
+																echo "<button type=\"button\" class=\"btn btn-danger\"><i class=\"fa fa-times\"></i> DISCONNECT</button>";
+																$conn="disconnect";
+															}																	
+														echo "</td>";	
+																											
+														echo "<td><a href='site/site_conn.php?id=".$result['mt_id']."&conn=".$conn."'><img src=\"img/enter.png\" width=\"20\" title=\"Enter To Site\"></a>";												
+													echo "</td>";
+													echo "</tr>";
+													}
+												?>
                                                                                                                                                                               
                                     </tbody>
                                 </table>
